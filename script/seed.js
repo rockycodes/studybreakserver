@@ -19,8 +19,21 @@ async function seed () {
   // executed until that promise resolves!
 
   const users = await Promise.all([
-    User.create({email: 'cody@email.com', password: '123'}),
-    User.create({email: 'murphy@email.com', password: '123'})
+    User.create({email: 'laurel.bear@gmail.com', password: 'lbear', categories: [
+      'https://smittenkitchen.com/2008/04/almond-cake-with-strawberry-rhubarb-compote/',
+      'https://www.youtube.com/watch?v=QXtC0jOVZNs',
+      'https://www.buzzfeed.com/francescaarea/dad-jokes-all-funny-no-filler?utm_term=.hhL6409ym#.txklQXj1e'
+    ]}),
+    User.create({email: 'hgodlove@gmail.com', password: 'booboo', categories: [
+      'https://www.scientificamerican.com/article/why-everyone-should-read-harry-potter/',
+      'https://www.washingtonpost.com/lifestyle/home/the-right-way-to-care-for-one-of-natures-most-neglected-creatures-the-houseplant/2017/02/21/3f6afb4e-f3ad-11e6-b9c9-e83fce42fb61_story.html?noredirect=on',
+      'https://www.worldweet.com/weird-animals/'
+    ]}),
+    User.create({email: 'roxannewinston@gmail.com', password: 'rox*wins', categories: [
+      'http://www.denofgeek.com/us/movies/marvel/272966/whats-next-for-the-marvel-cinematic-universe',
+      'https://www.youtube.com/user/janellemonae',
+      'https://www.babble.com/pregnancy/'
+    ]})
   ])
   // Wowzers! We can even `await` on the right-hand side of the assignment operator
   // and store the result that the promise resolves to in a variable! This is nice!
